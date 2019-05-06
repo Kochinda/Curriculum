@@ -1,12 +1,12 @@
 # ノードの取得方法
 
 ## ノードの取得方法一覧
-- document.getElementById
-- document.getElementsByClassName
-- document.getElementsByTagName
-- document.getElementsByName
-- document.querySelector
-- document.querySelectorAll
+- IDから取得
+- CLASSから取得
+- 要素名から取得
+- nameから取得
+- CSSセレクタから取得（1つだけ）
+- CSSセレクタから取得（マッチする要素すべて）
 
 
 ### IDから取得
