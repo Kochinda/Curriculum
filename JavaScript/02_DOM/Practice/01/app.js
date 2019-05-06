@@ -45,3 +45,16 @@ let textGroup3 = document.querySelectorAll('.textGroup3');
 for (text of textGroup3) {
   text.style.backgroundColor = 'skyblue';
 }
+
+//Q9
+let child1 = document.getElementById('child1');
+let div = child1.parentElement
+div.style.backgroundColor = 'lightgreen'
+
+// Q10
+let box1 = document.getElementById('box1');
+let pList = box1.children;
+
+for (p of pList) {
+  p.style.backgroundColor = 'orange';
+}
