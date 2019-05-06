@@ -7,6 +7,8 @@
 - nameから取得
 - CSSセレクタから取得（1つだけ）
 - CSSセレクタから取得（マッチする要素すべて）
+- 親要素を取得
+- 子要素を取得
 
 
 ### IDから取得
@@ -18,9 +20,9 @@ document.getElementById('id名');
 	
 ```
 <ul>
-    <li id="red">赤</li>
-    <li id="blue">ブルー</li>
-    <li id="green">グリーン</li>
+  <li id="red">赤</li>
+  <li id="blue">ブルー</li>
+  <li id="green">グリーン</li>
 </ul>
 ```
 	
@@ -40,10 +42,10 @@ document.getElementsByClassName('class名')
 	
 ```
 <ul>
-    <li class="red">赤</li>
-    <li class="blue">ブルー</li>
-    <li class="green">グリーン1</li>
-    <li class="green">グリーン2</li>
+  <li class="red">赤</li>
+  <li class="blue">ブルー</li>
+  <li class="green">グリーン1</li>
+  <li class="green">グリーン2</li>
 </ul>
 ```
 	
@@ -64,9 +66,9 @@ document.getElementsByTagName('タグ名');
 	
 ```
 <ul>
-    <li id="red">赤</li>
-    <li id="blue">ブルー</li>
-    <li id="green">グリーン</li>
+  <li id="red">赤</li>
+  <li id="blue">ブルー</li>
+  <li id="green">グリーン</li>
 </ul>
 ```
 	
@@ -119,9 +121,9 @@ document.querySelector('セレクタ');
 	
 ```
 <ul id="box">
-    <li class="color">赤</li>
-    <li class="color">ブルー</li>
-    <li class="color">グリーン</li>
+  <li class="color">赤</li>
+  <li class="color">ブルー</li>
+  <li class="color">グリーン</li>
 </ul>
 ```
 	
@@ -141,9 +143,9 @@ document.querySelectorAll('セレクタ');
 	
 ```
 <ul id="box">
-    <li class="color">赤</li>
-    <li class="color">ブルー</li>
-    <li class="color">グリーン</li>
+  <li class="color">赤</li>
+  <li class="color">ブルー</li>
+  <li class="color">グリーン</li>
 </ul>
 ```
 	
@@ -154,4 +156,56 @@ let colors = document.querySelectorAll('#box .color');
 for (color of colors) {
 	console.log(color);
 }
+```	
+
+### 親ノードを取得
+```
+ノード.parentElement; 
+```
+	
+例）
+	
+```
+<ul id="box">
+  <li id="red">赤</li>
+  <li id="blue">ブルー</li>
+  <li id="green">グリーン</li>
+</ul>
+```
+	
+ulを取得する
+	
+```
+let red = document.getElementById('red');
+let ul = red.parentElement;
+console.log(ul);
+
+ul.style.backgroundColor = 'pink';
+```	
+
+### 子要素を取得
+```
+ノード.children; 
+```
+	
+例）
+	
+```
+<ul id="box">
+  <li id="red">赤</li>
+  <li id="blue">ブルー</li>
+  <li id="green">グリーン</li>
+</ul>
+```
+	
+liをすべて取得する
+	
+```
+let box = document.getElementById('box');
+let liList = box.children;
+
+for (li of liList) {
+  console.log(li.textContent)
+}
+
 ```	
