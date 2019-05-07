@@ -10,6 +10,8 @@ document.getElementById('addBtn').addEventListener('click', function() {
   let list = document.getElementById('list');
   list.insertBefore(li, list.firstChild);
 
+  // 入力欄を空にする
+  task.value = '';
 });
 
 document.getElementById('deleteBtn').addEventListener('click', function() {
