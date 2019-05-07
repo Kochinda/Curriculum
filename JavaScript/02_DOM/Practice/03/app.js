@@ -8,7 +8,7 @@ document.getElementById('addBtn').addEventListener('click', function() {
   
   // リストに作成したliを追加
   let list = document.getElementById('list');
-  list.appendChild(li);
+  list.insertBefore(li, list.firstChild);
 
 });
 
